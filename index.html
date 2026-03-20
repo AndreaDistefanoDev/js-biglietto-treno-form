@@ -10,27 +10,35 @@
 </head>
 
 <body>
-
-    <form>
-        <div class="mb-3">
-            <label for="user">Nome</label><br>
-            <input type="text" id="user" placeholder="Scrivi il tuo Nome" required><br>
-        </div>
-        <label for="surname">Cognome</label><br>
-        <input type="text" id="surname" placeholder="Scrivi il tuo Cognome"><br>
-        <label for="km">Km da percorrere</label><br>
-        <input type="number" id="km" placeholder="0 km" required><br>
-        <label for="age">Fascia d'età</label><br>
-        <select id="age" required><br>
-            <option value="adult">Maggiorenne</option>
-            <option value="underage">Minorenne</option>
-        </select><br>
-        <button type="submit" id="generate">Genera</button>
-        <button type="reset" id="delate">Annulla</button>
-    </form>
+    <h1 class="p-3">CALCOLA IL PREZZO DEL TUO BIGLETTO</h1>
+    <div class="container">
+        <form>
+            <div class="card">
+                <div class="row">
+                    <div class="col p-3">
+                        <label for="user">Nome</label><br>
+                        <input type="text" id="user" placeholder="Scrivi il tuo Nome" required><br>
+                    </div>
+                    <label for="surname">Cognome</label><br>
+                    <input type="text" id="surname" placeholder="Scrivi il tuo Cognome"><br>
+                    <label for="km">Km da percorrere</label><br>
+                    <input type="number" id="km" placeholder="0 km" required><br>
+                    <label for="age">Fascia d'età</label><br>
+                    <select id="age" required><br>
+                        <option value="adult">Maggiorenne</option>
+                        <option value="underage">Minorenne</option>
+                    </select><br>
+                    <button type="submit" id="generate">Genera</button>
+                    <button type="reset" id="delate">Annulla</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <h1>IL TUO BIGLIETTO</h1>
     <section>
         <div class="conteiner">
             <h3>DETTAGLI TICKET</h3>
+
             <div class="card">
                 <div class="card-body">
                     <div>
@@ -54,7 +62,7 @@
                         <span id="codice_cp"></span>
                     </div>
                     <div>
-                        <span><strong>Totale Bigletto</strong></span><br>
+                        <span><strong>Totale Biglietto</strong></span><br>
                         <span id="total_price"></span>
                     </div>
                 </div>
