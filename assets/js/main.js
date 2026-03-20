@@ -38,28 +38,48 @@ const formEl = document.querySelector('form')
 const ageFieldEl = document.getElementById('age')
 const kmFieldEl = document.getElementById('km')
 const userFieldEl = document.getElementById('user')
-const surnameFieldEl= document.getElementById('surname')
+const surnameFieldEl = document.getElementById('surname')
 const btnGenerateEl = document.getElementById('generate')
 const btnDelateEl = document.getElementById('delate')
 const totalPriceEl = document.getElementById('total_price')
+const UserEl = document.getElementById('nome_passeggero')
+const surnameEl = document.getElementById('cognome_passeggero')
+const offerEl = document.getElementById('offerta')
+const carrozzaFieldEl = document.getElementById('carrozza')
+const codiceCpfieldEl= document.getElementById('codice_cp')
 const priceKm = 0.21
+const carrozzaEl = getRandomNumber(0, 10)
+const codiceCpEl = getRandomNumber(0,10000)
 // 2. Elaboration
 
 formEl.addEventListener(`submit`, function (e) {
     e.preventDefault()
-    
+
     const age = ageFieldEl.value
-    const surname=surnameFieldEl.value
+    const surname = surnameFieldEl.value
     const km = kmFieldEl.value
     const user = userFieldEl.value
     let ticketPrice = priceKm * km
-
+    let offer = 'Biglietto Standard'
     if (age === 'adult') {
         ticketPrice *= 0.80
+        offer = 'Biglietto Maggiorenni'
     } else if (age === 'underage') {
         ticketPrice *= 0.60
+        offer = 'Biglietto Minorenni'
     }
 
     totalPriceEl.innerHTML = ticketPrice.toFixed(2)
+    UserEl.innerHTML = user
+    surnameEl.innerHTML = surname
+    offerEl.innerHTML = offer
+    carrozzaFieldEl.innerHTML = carrozzaEl
+    codiceCpfieldEl.innerHTML=codiceCpEl
 
 })
+
+
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
