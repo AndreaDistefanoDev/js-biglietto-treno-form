@@ -34,26 +34,36 @@ console.log('Woooooo');
 // - Il numero di chilometri da percorrere
 // - Età del passeggero
 
-const formEl= document.querySelector('form')
+const formEl = document.querySelector('form')
 const ageFieldEl = document.getElementById('age')
 const kmFieldEl = document.getElementById('km')
 const userFieldEl = document.getElementById('user')
 const btnGenerateEl = document.getElementById('generate')
-const btnDelateEl =document.getElementById('delate')
-console.log(ageFieldEl,kmFieldEl,userFieldEl,btnDelateEl,btnGenerateEl);
+const btnDelateEl = document.getElementById('delate')
+console.log(ageFieldEl, kmFieldEl, userFieldEl, btnDelateEl, btnGenerateEl);
 const priceKm = 0.21
 // 2. Elaboration
 
-formEl.addEventListener(`submit`,function(e){
-    e.defaultPrevented()
+formEl.addEventListener(`submit`, function (e) {
+    e.preventDefault()
 
     console.log(ageFieldEl.value);
     console.log(kmFieldEl.value);
     console.log(userFieldEl.value);
     const age = ageFieldEl.value
-    const km = kmFieldEl
-    const user = userFieldEl
+    const km = kmFieldEl.value
+    const user = userFieldEl.value
+    let ticketPrice = priceKm * km
 
+    if (age === 'adult') {
+        ticketPrice *= 0.80
+    } else if (age === 'underage') {
+        ticketPrice *= 0.60
+    }
+
+    console.log(ticketPrice.toFixed(2));
     
-    
+
+
+
 })

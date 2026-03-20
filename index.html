@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <form>
-        <input type="text" id="user" placeholder="Scrivi il tuo Nome" required>
-        <input type="number" id="km" placeholder="0 km" required>
-        <select id="age" required>
+        <label for="user">Nome e Cognome</label><br>
+        <input type="text" id="user" placeholder="Scrivi il tuo Nome" required><br>
+        <label for="km">Km da percorrere</label><br>
+        <input type="number" id="km" placeholder="0 km" required><br>
+        <label for="age">Fascia d'età</label><br>
+        <select id="age" required><br>
             <option value="adult">Maggiorenne</option>
             <option value="underage">Minorenne</option>
-        </select>
+        </select><br>
         <button type="submit" id="generate">Genera</button>
         <button type="reset" id="delate">Annulla</button>
 
@@ -23,4 +28,5 @@
 
     <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
