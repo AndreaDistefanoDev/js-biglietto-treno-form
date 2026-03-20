@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
 
     <form>
-        <label for="user">Nome e Cognome</label><br>
-        <input type="text" id="user" placeholder="Scrivi il tuo Nome" required><br>
+        <div class="mb-3">
+            <label for="user">Nome</label><br>
+            <input type="text" id="user" placeholder="Scrivi il tuo Nome" required><br>
+        </div>
+        <label for="surname">Cognome</label><br>
+        <input type="text" id="surname" placeholder="Scrivi il tuo Cognome"><br>
         <label for="km">Km da percorrere</label><br>
         <input type="number" id="km" placeholder="0 km" required><br>
         <label for="age">Fascia d'età</label><br>
@@ -21,9 +27,18 @@
         </select><br>
         <button type="submit" id="generate">Genera</button>
         <button type="reset" id="delate">Annulla</button>
-
-
     </form>
+    <section>
+        <div class="conteiner">
+            <h3>DETTAGLI TICKET</h3>
+            <div class="card">
+                <div class="card-body">
+                    
+                </div>
+            </div>
+            <div id="total_price"></div>
+        </div>
+    </section>
 
 
     <script src="./assets/js/main.js"></script>

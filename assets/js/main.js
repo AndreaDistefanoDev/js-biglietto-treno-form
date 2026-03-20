@@ -38,19 +38,18 @@ const formEl = document.querySelector('form')
 const ageFieldEl = document.getElementById('age')
 const kmFieldEl = document.getElementById('km')
 const userFieldEl = document.getElementById('user')
+const surnameFieldEl= document.getElementById('surname')
 const btnGenerateEl = document.getElementById('generate')
 const btnDelateEl = document.getElementById('delate')
-console.log(ageFieldEl, kmFieldEl, userFieldEl, btnDelateEl, btnGenerateEl);
+const totalPriceEl = document.getElementById('total_price')
 const priceKm = 0.21
 // 2. Elaboration
 
 formEl.addEventListener(`submit`, function (e) {
     e.preventDefault()
-
-    console.log(ageFieldEl.value);
-    console.log(kmFieldEl.value);
-    console.log(userFieldEl.value);
+    
     const age = ageFieldEl.value
+    const surname=surnameFieldEl.value
     const km = kmFieldEl.value
     const user = userFieldEl.value
     let ticketPrice = priceKm * km
@@ -61,9 +60,6 @@ formEl.addEventListener(`submit`, function (e) {
         ticketPrice *= 0.60
     }
 
-    console.log(ticketPrice.toFixed(2));
-    
-
-
+    totalPriceEl.innerHTML = ticketPrice.toFixed(2)
 
 })
