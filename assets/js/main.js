@@ -34,6 +34,26 @@ console.log('Woooooo');
 // - Il numero di chilometri da percorrere
 // - Età del passeggero
 
-const ageField = document.getElementById('age')
-const kmField = document.getElementById('km')
-const nameField=
+const formEl= document.querySelector('form')
+const ageFieldEl = document.getElementById('age')
+const kmFieldEl = document.getElementById('km')
+const userFieldEl = document.getElementById('user')
+const btnGenerateEl = document.getElementById('generate')
+const btnDelateEl =document.getElementById('delate')
+console.log(ageFieldEl,kmFieldEl,userFieldEl,btnDelateEl,btnGenerateEl);
+const priceKm = 0.21
+// 2. Elaboration
+
+formEl.addEventListener(`submit`,function(e){
+    e.defaultPrevented()
+
+    console.log(ageFieldEl.value);
+    console.log(kmFieldEl.value);
+    console.log(userFieldEl.value);
+    const age = ageFieldEl.value
+    const km = kmFieldEl
+    const user = userFieldEl
+
+    
+    
+})
