@@ -46,11 +46,16 @@ const UserEl = document.getElementById('nome_passeggero')
 const surnameEl = document.getElementById('cognome_passeggero')
 const offerEl = document.getElementById('offerta')
 const carrozzaFieldEl = document.getElementById('carrozza')
-const codiceCpfieldEl= document.getElementById('codice_cp')
+const codiceCpfieldEl = document.getElementById('codice_cp')
 const priceKm = 0.21
 const carrozzaEl = getRandomNumber(0, 10)
-const codiceCpEl = getRandomNumber(0,10000)
+const codiceCpEl = getRandomNumber(0, 10000)
 // 2. Elaboration
+/*Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
+il prezzo del biglietto è definito in base ai km (0.21 € al km)
+va applicato uno sconto del 20% per i minorenni
+va applicato uno sconto del 40% per gli over 65.*/
+
 
 formEl.addEventListener(`submit`, function (e) {
     e.preventDefault()
@@ -74,7 +79,7 @@ formEl.addEventListener(`submit`, function (e) {
     surnameEl.innerHTML = surname
     offerEl.innerHTML = offer
     carrozzaFieldEl.innerHTML = carrozzaEl
-    codiceCpfieldEl.innerHTML=codiceCpEl
+    codiceCpfieldEl.innerHTML = codiceCpEl
 
 })
 
